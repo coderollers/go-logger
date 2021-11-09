@@ -85,6 +85,10 @@ func SetCorrelationIdContextKey(key string) {
 // Init bootstraps the logger. You must call this method just once at the
 // beginning of your application. The default log level is Info.
 //
+// Call Logger() or SugaredLogger() to retrieve an instance of the desired type
+// of logger. Use WithCorrelationId() or WithContextCorrelationId() to add a
+// correlation ID to your logs.
+//
 // If enableLogLevelEndpoint is true, then an HTTP endpoint on port 53835 at
 // /logger is exposed which can be used to change the log level dynamically. See
 // the Zap documentation for more information.
